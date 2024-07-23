@@ -1,5 +1,3 @@
-import './index.css'
-
 const HistoryItem = props => {
   const {HistoryDetails, deleteHistory} = props
   const {id, timeAccessed, logoUrl, title, domainUrl} = HistoryDetails
@@ -18,7 +16,12 @@ const HistoryItem = props => {
         </div>
       </div>
       <div className="browser-end">
-        <button className="delete-button" type="button" onClick={onDelete}>
+        <button
+          className="delete-button"
+          type="button"
+          onClick={onDelete}
+          data-testid="delete"
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             className="delete-image"
